@@ -14,7 +14,10 @@ export default {
         white: '#FFFFFD',
         yellow: '#FBCF41',
         orange: '#F6A230',
-        blue: '#5966B1'
+        blue: '#5966B1',
+        bluehovered: '#4F5C9D',
+        orangehovered: '#DB8C28',
+        yellowhovered: '#E6B736'
       }
     },
   },

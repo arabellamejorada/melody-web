@@ -4,11 +4,25 @@
 @tailwind utilities;
 @import "tailwindcss";
 
+/* index.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --orange: #F6A230;
+  --orangehovered: #DB8C28;
   --blue: #5966B1;
+  --bluehovered: #4F5C9D;
   --white: #FFFFFD;
   --yellow: #FBCF41;
+  --yellowhovered: #E6B736;
   --heading-font: 'Dela Gothic One', sans-serif;
   --body-font: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

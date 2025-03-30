@@ -1,32 +1,33 @@
-import { Link } from 'react-router-dom'
-import '../index.css'
+import React from 'react'
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white/20 backdrop-blur-md">
+    <nav className="sticky top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-3xl">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="font-heading no-underline text-blue text-2xl">
+        {/* Logo linking to home */}
+        <a
+          href="#home"
+          className="font-heading text-blue text-2xl no-underline"
+        >
           melody.web
-        </Link>
-
+        </a>
         {/* Nav links */}
         <ul className="flex list-none space-x-6">
           <li>
-            <Link
-              to="/about"
-              className="font-heading no-underline text-orange text-lg hover:text-orange-600 transition-colors"
+            <a
+              href="#aboutSection"
+              className="font-heading text-orange text-lg hover:text-orange-600 transition-colors no-underline"
             >
               about
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/game"
-              className="font-heading no-underline text-orange text-lg hover:text-orange-600 transition-colors"
+            <a
+              href="#game"
+              className="font-heading text-orange text-lg hover:text-orange-600 transition-colors no-underline"
             >
               game
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
