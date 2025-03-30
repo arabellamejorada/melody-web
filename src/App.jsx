@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './sections/Home'
-import About from './sections/About'
-import Game from './sections/Game'
+import Navbar from './components/Navbar.jsx'
+import Home from './sections/Home.jsx'
+import About from './sections/About.jsx'
+import Game from './sections/Game.jsx'
 
 function App() {
   return (
