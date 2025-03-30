@@ -5,7 +5,7 @@ import { FaBirthdayCake } from 'react-icons/fa'
 
 function ProfileCard() {
   return (
-    <div className="font-body bg-yellow text-black w-[400px] rounded-2xl p-8 shadow-md mx-auto">
+    <div className="font-body bg-yellow text-black w-full lg:w-[400px] max-w-md rounded-2xl p-6 sm:p-8 shadow-md mx-auto">
       {/* Profile Image */}
       <img
         src="/pfp.jpg" // Replace with your image URL

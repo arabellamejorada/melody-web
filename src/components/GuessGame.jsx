@@ -8,17 +8,14 @@ function GuessGame() {
   const [trialsLeft, setTrialsLeft] = useState(10)
   const [isGameOver, setIsGameOver] = useState(false)
 
-  // Initialize the game on mount
   useEffect(() => {
     resetGame()
   }, [])
 
-  // Handle input change
   const handleInputChange = (e) => {
     setGuess(e.target.value)
   }
 
-  // Handle guess logic
   const handleGuess = () => {
     if (!guess || isNaN(guess)) return
     const userGuess = parseInt(guess, 10)
@@ -29,11 +26,9 @@ function GuessGame() {
       return
     }
 
-    // Decrement trials
     const newTrialsLeft = trialsLeft - 1
     setTrialsLeft(newTrialsLeft)
 
-    // Check guess
     if (userGuess === randomNumber) {
       setMessage('YOU GOT IT!')
       setIsGameOver(true)
@@ -43,17 +38,14 @@ function GuessGame() {
       setMessage('TOO HIGH!')
     }
 
-    // Check if out of trials
     if (newTrialsLeft <= 0 && userGuess !== randomNumber) {
       setMessage('GAME OVER')
       setIsGameOver(true)
     }
 
-    // Clear input
     setGuess('')
   }
 
-  // Reset game (new random number, reset states)
   const resetGame = () => {
     const newNumber = Math.floor(Math.random() * 101)
     setRandomNumber(newNumber)
@@ -80,14 +72,14 @@ function GuessGame() {
     <div
       className="
         font-body bg-orange text-white 
-        w-[420px] h-[550px]  
-        rounded-2xl p-10 shadow-lg mx-auto
-        flex flex-col justify-between outline-blue
+        w-full max-w-[420px]
+        rounded-2xl p-6 sm:p-10 shadow-lg mx-auto
+        flex flex-col justify-between
       "
     >
       {/* Top Section (Title + Input) */}
       <div>
-        <h1 className="font-heading text-center text-4xl mb-6">
+        <h1 className="font-heading text-center text-3xl sm:text-4xl mb-4">
           PLAY HERE
         </h1>
 
@@ -127,7 +119,7 @@ function GuessGame() {
           System says...
         </p>
         <div className="mb-4 min-h-[48px] flex items-center justify-center">
-          <h2 className={`text-4xl font-heading text-center ${messageColorClass}`}>
+          <h2 className={`text-3xl sm:text-4xl font-heading text-center ${messageColorClass}`}>
             {message || '...'}
           </h2>
         </div>
@@ -142,10 +134,10 @@ function GuessGame() {
           {/* Trial Left */}
           <div className="text-center">
             <p className="uppercase text-sm font-bold mb-1">Trial Left</p>
-            <div className="bg-white text-orange w-24 h-24 rounded-full flex items-center justify-center mx-auto">
-              <span className="text-3xl font-bold">
+            <div className="bg-white text-orange w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mx-auto">
+              <span className="text-2xl sm:text-3xl font-bold">
                 {trialsLeft}{' '}
-                <span className="text-base font-normal">of 10</span>
+                <span className="text-xs sm:text-base font-normal">of 10</span>
               </span>
             </div>
           </div>

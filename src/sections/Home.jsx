@@ -17,7 +17,7 @@ const Home = () => {
     <div>
       <Navbar />
       {/* Home Section */}
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center">
+      <section id="home" className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8">
         <Ellipsis />
         <BiChevronsDown
           onClick={handleScrollToAbout}
@@ -25,11 +25,11 @@ const Home = () => {
         />
       </section>
       {/* About Section */}
-      <section id="aboutme" className="min-h-screen flex items-center justify-center">
+      <section id="aboutme" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
         <About />
       </section>
       {/* Game Section */}
-      <section id="game" className="min-h-screen flex items-center justify-center">
+      <section id="game" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
         <Game />
       </section>
       <Footer />
