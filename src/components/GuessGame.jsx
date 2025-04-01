@@ -61,7 +61,7 @@ function GuessGame() {
 
   const messageColorClass =
     message === 'YOU GOT IT!'
-      ? 'text-green-400'
+      ? 'text-[#39FF14]'
       : (message === 'GAME OVER' || message === 'Invalid input!')
       ? 'text-white'
       : (message === 'TOO LOW!' || message === 'TOO HIGH!')
