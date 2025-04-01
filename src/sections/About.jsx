@@ -4,7 +4,7 @@ import ProfileCard from '../components/ProfileCard.jsx'
 function About() {
   return (
     <section
-      id="aboutSection"
+      id="aboutme"
       className="min-h-screen w-full flex items-center justify-center px-4 sm:px-6 md:px-8"
     >
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
